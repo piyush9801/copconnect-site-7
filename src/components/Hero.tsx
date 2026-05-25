@@ -30,12 +30,12 @@ type Notif = {
 }
 
 const NOTIFS: Notif[] = [
-  { title: 'Unknown Sender', body: 'Click here to verify your account', position: 'top-[6%] left-[2%] sm:left-[3%]', delay: 0.6, float: 'float-1', Ico: AlertTriangle },
-  { title: 'OTP Alert', body: 'Do not share this code · 123456', position: 'top-[8%] right-[6%] lg:right-[18%]', delay: 0.8, float: 'float-2', Ico: Lock },
-  { title: 'WIN iPHONE 15', body: 'Claim your prize now! bit.ly/free-gift', position: 'top-[42%] left-[1%] sm:left-[2%]', delay: 1.0, float: 'float-3', Ico: Gift },
-  { title: 'Fake Support', body: 'We need more info to unblock your ID', position: 'top-[38%] right-[3%] lg:right-[12%]', delay: 1.2, float: 'float-1', Ico: HelpCircle },
-  { title: 'Suspicious Login', body: 'New device detected from unknown location', position: 'bottom-[10%] left-[2%]', delay: 1.4, float: 'float-2', Ico: AlertCircle },
-  { title: 'Scam Call', body: '+91 98765 43210 · Incoming call…', position: 'bottom-[22%] right-[4%] lg:right-[14%]', delay: 1.6, float: 'float-3', Ico: Phone, dismissable: true },
+  { title: 'Unknown Sender', body: 'Click here to verify your account', position: 'top-[5%] left-[3%]', delay: 0.6, float: 'float-1', Ico: AlertTriangle },
+  { title: 'OTP Alert', body: 'Do not share this code · 123456', position: 'top-[8%] right-[22%]', delay: 0.8, float: 'float-2', Ico: Lock },
+  { title: 'WIN iPHONE 15', body: 'Claim your prize now! bit.ly/free-gift', position: 'top-[42%] left-[2%]', delay: 1.0, float: 'float-3', Ico: Gift },
+  { title: 'Fake Support', body: 'We need more info to unblock your ID', position: 'top-[40%] right-[18%]', delay: 1.2, float: 'float-1', Ico: HelpCircle },
+  { title: 'Suspicious Login', body: 'New device detected from unknown location', position: 'bottom-[8%] left-[3%]', delay: 1.4, float: 'float-2', Ico: AlertCircle },
+  { title: 'Scam Call', body: '+91 98765 43210 · Incoming call…', position: 'bottom-[18%] right-[20%]', delay: 1.6, float: 'float-3', Ico: Phone, dismissable: true },
 ]
 
 const MINI: { Ico: LucideIcon; label: string; desc: string }[] = [
@@ -87,9 +87,9 @@ export default function Hero() {
   return (
     <section id="home" className="bg-cream relative overflow-hidden">
       {/* Hero: 2-col split — image LEFT, cream content RIGHT */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] min-h-[640px] lg:min-h-[760px]">
+      <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] min-h-[640px] lg:min-h-[760px]">
         {/* LEFT: full-bleed image with 6 dark notification cards */}
-        <div className="relative bg-[#0E0905] min-h-[480px] lg:min-h-[760px] overflow-hidden">
+        <div className="relative bg-[#0E0905] min-h-[520px] lg:min-h-[760px] overflow-hidden">
           <motion.img
             src="/hero-family.png"
             alt="Mother and son using a tablet — cyber safety begins at home"
@@ -97,10 +97,11 @@ export default function Hero() {
             animate={{ scale: 1 }}
             transition={{ duration: 14, ease: 'linear' }}
             className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: 'left center' }}
           />
-          {/* Gradient fade to cream on right edge to blend into right column */}
-          <div className="hidden lg:block absolute inset-y-0 right-0 w-32 bg-gradient-to-r from-transparent to-cream pointer-events-none" />
-          {/* Bottom vignette for stats-band readability */}
+          {/* Subtle cream fade at the right edge so the cropped image blends into the cream content column */}
+          <div className="hidden lg:block absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-cream pointer-events-none z-10" />
+          {/* Bottom vignette on mobile for stats-band readability */}
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-cream/40 to-transparent lg:hidden pointer-events-none" />
 
           {NOTIFS.map((n) => <NotifCard key={n.title} n={n} />)}
