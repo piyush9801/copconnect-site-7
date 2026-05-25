@@ -185,14 +185,14 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom stats band — overlapping white card */}
-      <div className="bg-cream px-4 sm:px-6 lg:px-10 pb-20">
+      {/* Bottom stats band — overlapping white card on desktop, normal flow on mobile */}
+      <div className="bg-cream px-4 sm:px-6 lg:px-10 pt-8 lg:pt-0 pb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-[1440px] mx-auto bg-white border border-border rounded-3xl shadow-[0_24px_60px_-25px_rgba(0,0,0,0.15)] -mt-12 relative z-20 p-5 sm:p-7 lg:p-9 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.2fr_repeat(4,1fr)_1.2fr] gap-5 sm:gap-6 lg:gap-8 items-center"
+          className="max-w-[1440px] mx-auto bg-white border border-border rounded-3xl shadow-[0_24px_60px_-25px_rgba(0,0,0,0.15)] lg:-mt-12 relative z-30 p-5 sm:p-7 lg:p-9 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.2fr_repeat(4,1fr)_1.2fr] gap-5 sm:gap-6 lg:gap-8 items-center"
         >
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="font-serif text-lg sm:text-xl text-ink leading-tight">
@@ -211,7 +211,7 @@ export default function Hero() {
               </div>
             </div>
           ))}
-          <div className="col-span-2 md:col-span-3 lg:col-span-1 flex items-center gap-3 lg:justify-end lg:border-l lg:border-border lg:pl-6 pt-3 lg:pt-0 border-t lg:border-t-0 border-border/60">
+          <div className="col-span-2 md:col-span-3 lg:col-span-1 flex items-center gap-3 lg:justify-end lg:border-l lg:border-border lg:pl-6 pt-4 lg:pt-0 border-t lg:border-t-0 border-border/60">
             <div className="min-w-0 flex-1 lg:flex-initial">
               <div className="font-bold text-sm text-ink leading-tight">Active across India</div>
               <div className="text-[11px] text-muted leading-snug flex items-center gap-1.5 mt-0.5">
@@ -219,7 +219,7 @@ export default function Hero() {
                 Powered by ISAC Foundation
               </div>
             </div>
-            <IndiaMap className="w-9 h-12 text-muted/40 flex-shrink-0" />
+            <IndiaMap className="hidden sm:block w-8 h-11 text-muted/40 flex-shrink-0" />
           </div>
         </motion.div>
       </div>
