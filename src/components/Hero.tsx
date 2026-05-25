@@ -34,8 +34,8 @@ type NotifWithVis = Notif & { hideOnMobile?: boolean }
 // Mobile shows just 3 (Unknown Sender top-left, OTP Alert top-right, Scam Call bottom-right)
 // Tablet+ (md:) shows all 6
 const NOTIFS: NotifWithVis[] = [
-  { title: 'Unknown Sender', body: 'Click here to verify your account', position: 'top-[4%] left-[3%] sm:top-[6%] sm:left-[7%]', delay: 0.6, float: 'float-1', Ico: AlertTriangle },
-  { title: 'OTP Alert', body: 'Do not share this code · 123456', position: 'top-[26%] right-[3%] sm:top-[10%] sm:right-[26%]', delay: 0.8, float: 'float-2', Ico: Lock },
+  { title: 'Unknown Sender', body: 'Click here to verify your account', position: 'top-[16%] left-[3%] sm:top-[6%] sm:left-[7%]', delay: 0.6, float: 'float-1', Ico: AlertTriangle },
+  { title: 'OTP Alert', body: 'Do not share this code · 123456', position: 'top-[52%] right-[3%] sm:top-[10%] sm:right-[26%]', delay: 0.8, float: 'float-2', Ico: Lock },
   { title: 'WIN iPHONE 15', body: 'Claim your prize now! bit.ly/free-gift', position: 'top-[40%] left-[5%]', delay: 1.0, float: 'float-3', Ico: Gift, hideOnMobile: true },
   { title: 'Fake Support', body: 'We need more info to unblock your ID', position: 'top-[42%] right-[22%]', delay: 1.2, float: 'float-1', Ico: HelpCircle, hideOnMobile: true },
   { title: 'Suspicious Login', body: 'New device detected from unknown location', position: 'bottom-[10%] left-[7%]', delay: 1.4, float: 'float-2', Ico: AlertCircle, hideOnMobile: true },
