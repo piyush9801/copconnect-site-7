@@ -30,12 +30,12 @@ type Notif = {
 }
 
 const NOTIFS: Notif[] = [
-  { title: 'Unknown Sender', body: 'Click here to verify your account', position: 'top-[5%] left-[3%]', delay: 0.6, float: 'float-1', Ico: AlertTriangle },
-  { title: 'OTP Alert', body: 'Do not share this code · 123456', position: 'top-[8%] right-[22%]', delay: 0.8, float: 'float-2', Ico: Lock },
-  { title: 'WIN iPHONE 15', body: 'Claim your prize now! bit.ly/free-gift', position: 'top-[42%] left-[2%]', delay: 1.0, float: 'float-3', Ico: Gift },
-  { title: 'Fake Support', body: 'We need more info to unblock your ID', position: 'top-[40%] right-[18%]', delay: 1.2, float: 'float-1', Ico: HelpCircle },
-  { title: 'Suspicious Login', body: 'New device detected from unknown location', position: 'bottom-[8%] left-[3%]', delay: 1.4, float: 'float-2', Ico: AlertCircle },
-  { title: 'Scam Call', body: '+91 98765 43210 · Incoming call…', position: 'bottom-[18%] right-[20%]', delay: 1.6, float: 'float-3', Ico: Phone, dismissable: true },
+  { title: 'Unknown Sender', body: 'Click here to verify your account', position: 'top-[6%] left-[7%]', delay: 0.6, float: 'float-1', Ico: AlertTriangle },
+  { title: 'OTP Alert', body: 'Do not share this code · 123456', position: 'top-[10%] right-[26%]', delay: 0.8, float: 'float-2', Ico: Lock },
+  { title: 'WIN iPHONE 15', body: 'Claim your prize now! bit.ly/free-gift', position: 'top-[40%] left-[5%]', delay: 1.0, float: 'float-3', Ico: Gift },
+  { title: 'Fake Support', body: 'We need more info to unblock your ID', position: 'top-[42%] right-[22%]', delay: 1.2, float: 'float-1', Ico: HelpCircle },
+  { title: 'Suspicious Login', body: 'New device detected from unknown location', position: 'bottom-[10%] left-[7%]', delay: 1.4, float: 'float-2', Ico: AlertCircle },
+  { title: 'Scam Call', body: '+91 98765 43210 · Incoming call…', position: 'bottom-[22%] right-[24%]', delay: 1.6, float: 'float-3', Ico: Phone, dismissable: true },
 ]
 
 const MINI: { Ico: LucideIcon; label: string; desc: string }[] = [
