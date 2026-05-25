@@ -29,13 +29,15 @@ type Notif = {
   dismissable?: boolean
 }
 
-const NOTIFS: Notif[] = [
-  { title: 'Unknown Sender', body: 'Click here to verify your account', position: 'top-[6%] left-[7%]', delay: 0.6, float: 'float-1', Ico: AlertTriangle },
-  { title: 'OTP Alert', body: 'Do not share this code · 123456', position: 'top-[10%] right-[26%]', delay: 0.8, float: 'float-2', Ico: Lock },
-  { title: 'WIN iPHONE 15', body: 'Claim your prize now! bit.ly/free-gift', position: 'top-[40%] left-[5%]', delay: 1.0, float: 'float-3', Ico: Gift },
-  { title: 'Fake Support', body: 'We need more info to unblock your ID', position: 'top-[42%] right-[22%]', delay: 1.2, float: 'float-1', Ico: HelpCircle },
-  { title: 'Suspicious Login', body: 'New device detected from unknown location', position: 'bottom-[10%] left-[7%]', delay: 1.4, float: 'float-2', Ico: AlertCircle },
-  { title: 'Scam Call', body: '+91 98765 43210 · Incoming call…', position: 'bottom-[22%] right-[24%]', delay: 1.6, float: 'float-3', Ico: Phone, dismissable: true },
+type NotifWithVis = Notif & { hideOnMobile?: boolean }
+
+const NOTIFS: NotifWithVis[] = [
+  { title: 'Unknown Sender', body: 'Click here to verify your account', position: 'top-[5%] left-[5%] sm:left-[7%]', delay: 0.6, float: 'float-1', Ico: AlertTriangle },
+  { title: 'OTP Alert', body: 'Do not share this code · 123456', position: 'top-[22%] right-[5%] sm:top-[10%] sm:right-[26%]', delay: 0.8, float: 'float-2', Ico: Lock },
+  { title: 'WIN iPHONE 15', body: 'Claim your prize now! bit.ly/free-gift', position: 'top-[40%] left-[5%]', delay: 1.0, float: 'float-3', Ico: Gift, hideOnMobile: true },
+  { title: 'Fake Support', body: 'We need more info to unblock your ID', position: 'top-[42%] right-[22%]', delay: 1.2, float: 'float-1', Ico: HelpCircle, hideOnMobile: true },
+  { title: 'Suspicious Login', body: 'New device detected from unknown location', position: 'bottom-[10%] left-[5%] sm:left-[7%]', delay: 1.4, float: 'float-2', Ico: AlertCircle },
+  { title: 'Scam Call', body: '+91 98765 43210 · Incoming call…', position: 'bottom-[28%] right-[5%] sm:bottom-[22%] sm:right-[24%]', delay: 1.6, float: 'float-3', Ico: Phone, dismissable: true },
 ]
 
 const MINI: { Ico: LucideIcon; label: string; desc: string }[] = [
@@ -51,13 +53,13 @@ const STATS: { Ico: LucideIcon; n: string; l: string }[] = [
   { Ico: Map, n: '21+', l: 'States\nImpacted' },
 ]
 
-function NotifCard({ n }: { n: Notif }) {
+function NotifCard({ n }: { n: NotifWithVis }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 10, scale: 0.92 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.7, delay: n.delay, ease: [0.16, 1, 0.3, 1] }}
-      className={`absolute ${n.position} z-20`}
+      className={`absolute ${n.position} z-20 ${n.hideOnMobile ? 'hidden sm:block' : ''}`}
     >
       <div className={`${n.float} bg-black/65 backdrop-blur-md border border-white/15 rounded-xl sm:rounded-2xl shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] px-2.5 sm:px-3.5 py-2 sm:py-2.5 max-w-[170px] sm:max-w-[230px] w-max`}>
         <div className="flex items-start gap-2 sm:gap-2.5">

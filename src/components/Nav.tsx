@@ -40,8 +40,8 @@ export default function Nav() {
 
   return (
     <nav
-      className={`sticky top-0 z-40 transition-all ${
-        scrolled || open ? 'bg-cream/95 backdrop-blur-md border-b border-border/60' : 'bg-transparent'
+      className={`sticky top-0 z-50 transition-all ${
+        scrolled || open ? 'bg-cream border-b border-border/60' : 'bg-transparent'
       }`}
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-3 sm:py-4 flex items-center justify-between gap-3">
@@ -103,7 +103,7 @@ export default function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:hidden absolute left-0 right-0 top-full bg-cream/98 backdrop-blur-md border-b border-border/60 shadow-[0_24px_40px_-20px_rgba(0,0,0,0.18)]"
+            className="lg:hidden absolute left-0 right-0 top-full z-50 bg-cream border-b border-border/60 shadow-[0_24px_40px_-12px_rgba(0,0,0,0.22)]"
           >
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-4 flex flex-col">
               {NAV.map(({ label, to }, i) => (
