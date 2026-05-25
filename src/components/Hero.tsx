@@ -59,22 +59,22 @@ function NotifCard({ n }: { n: Notif }) {
       transition={{ duration: 0.7, delay: n.delay, ease: [0.16, 1, 0.3, 1] }}
       className={`absolute ${n.position} z-20`}
     >
-      <div className={`${n.float} bg-black/65 backdrop-blur-md border border-white/15 rounded-2xl shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] px-3.5 py-2.5 max-w-[230px] w-max`}>
-        <div className="flex items-start gap-2.5">
-          <span className="w-6 h-6 rounded-md bg-brand flex items-center justify-center flex-shrink-0 mt-0.5 shadow-[0_0_12px_rgba(232,101,42,0.6)]">
-            <n.Ico className="w-3.5 h-3.5 text-white" strokeWidth={2.2} />
+      <div className={`${n.float} bg-black/65 backdrop-blur-md border border-white/15 rounded-xl sm:rounded-2xl shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] px-2.5 sm:px-3.5 py-2 sm:py-2.5 max-w-[170px] sm:max-w-[230px] w-max`}>
+        <div className="flex items-start gap-2 sm:gap-2.5">
+          <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-md bg-brand flex items-center justify-center flex-shrink-0 mt-0.5 shadow-[0_0_12px_rgba(232,101,42,0.6)]">
+            <n.Ico className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" strokeWidth={2.2} />
           </span>
           <div className="min-w-0 flex-1">
-            <div className="text-white text-[11px] sm:text-xs font-bold leading-tight">{n.title}</div>
-            <div className="text-white/65 text-[10px] sm:text-[11px] leading-snug mt-0.5">{n.body}</div>
+            <div className="text-white text-[10px] sm:text-xs font-bold leading-tight">{n.title}</div>
+            <div className="text-white/65 text-[9px] sm:text-[11px] leading-snug mt-0.5">{n.body}</div>
           </div>
           {n.dismissable && (
             <button
               type="button"
-              className="w-5 h-5 rounded-full bg-red-500/90 flex items-center justify-center flex-shrink-0 mt-0.5 pointer-events-none"
+              className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-red-500/90 flex items-center justify-center flex-shrink-0 mt-0.5 pointer-events-none"
               aria-label="Dismiss"
             >
-              <X className="w-3 h-3 text-white" strokeWidth={3} />
+              <X className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" strokeWidth={3} />
             </button>
           )}
         </div>
@@ -166,11 +166,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-3 gap-4 sm:gap-6 mt-10 max-w-2xl"
+            className="grid grid-cols-1 xs:grid-cols-3 gap-4 xs:gap-3 sm:gap-6 mt-10 max-w-2xl"
           >
             {MINI.map(({ Ico, label, desc }) => (
               <div key={label} className="flex items-start gap-3">
-                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white border border-border flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border border-border flex items-center justify-center flex-shrink-0">
                   <Ico className="w-5 h-5 sm:w-6 sm:h-6 text-brand" strokeWidth={1.7} />
                 </div>
                 <div className="min-w-0">
@@ -190,9 +190,9 @@ export default function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-[1440px] mx-auto bg-white border border-border rounded-3xl shadow-[0_24px_60px_-25px_rgba(0,0,0,0.15)] -mt-12 relative z-20 p-6 sm:p-7 lg:p-9 grid grid-cols-1 md:grid-cols-[1.2fr_repeat(4,1fr)_1.2fr] gap-6 lg:gap-8 items-center"
+          className="max-w-[1440px] mx-auto bg-white border border-border rounded-3xl shadow-[0_24px_60px_-25px_rgba(0,0,0,0.15)] -mt-12 relative z-20 p-5 sm:p-7 lg:p-9 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.2fr_repeat(4,1fr)_1.2fr] gap-5 sm:gap-6 lg:gap-8 items-center"
         >
-          <div>
+          <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <div className="font-serif text-lg sm:text-xl text-ink leading-tight">
               Making the internet<br />safer for everyone
             </div>
@@ -209,8 +209,8 @@ export default function Hero() {
               </div>
             </div>
           ))}
-          <div className="flex items-center gap-3 md:justify-end md:border-l md:border-border md:pl-6">
-            <div className="min-w-0">
+          <div className="col-span-2 md:col-span-3 lg:col-span-1 flex items-center gap-3 lg:justify-end lg:border-l lg:border-border lg:pl-6 pt-3 lg:pt-0 border-t lg:border-t-0 border-border/60">
+            <div className="min-w-0 flex-1 lg:flex-initial">
               <div className="font-bold text-sm text-ink leading-tight">Active across India</div>
               <div className="text-[11px] text-muted leading-snug flex items-center gap-1.5 mt-0.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-600 animate-pulse" />
