@@ -31,16 +31,12 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 py-4 flex items-center justify-between gap-6">
-        <Link to="/" className="flex items-center gap-3 shrink-0">
+        <Link to="/" className="flex items-center shrink-0">
           <img
             src="https://copconnect-new-site.vercel.app/images/copconnect-logo.png"
             alt="CopConnect"
             className="h-12 sm:h-14 w-auto"
           />
-          <span className="hidden sm:flex flex-col leading-tight">
-            <span className="font-serif font-bold text-lg sm:text-xl text-ink leading-none">CopConnect</span>
-            <span className="text-[10px] sm:text-[11px] text-muted mt-1">Bridging the Gap in Cyber Justice</span>
-          </span>
         </Link>
         <div className="hidden lg:flex items-center gap-4 xl:gap-6">
           {NAV.map(({ label, to }) => (
