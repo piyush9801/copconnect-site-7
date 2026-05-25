@@ -3,11 +3,15 @@ import { Link, NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 const NAV = [
+  { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Platform', to: '/platform' },
   { label: 'Learning', to: '/learning' },
+  { label: 'CCIO', to: '/ccio' },
   { label: 'Safety Tips', to: '/tips' },
-  { label: 'Resources', to: '/ccio' },
+  { label: 'Comics', to: '/comics' },
+  { label: 'Merch', to: '/merch' },
+  { label: 'Sessions', to: '/sessions' },
 ]
 
 export default function Nav() {
@@ -38,14 +42,14 @@ export default function Nav() {
             <span className="text-[10px] sm:text-[11px] text-muted mt-1">Bridging the Gap in Cyber Justice</span>
           </span>
         </Link>
-        <div className="hidden lg:flex items-center gap-7 xl:gap-10">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
           {NAV.map(({ label, to }) => (
             <NavLink
               key={label}
               to={to}
               end={to === '/'}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors ${
+                `text-sm font-medium transition-colors whitespace-nowrap ${
                   isActive ? 'text-brand' : 'text-ink-mid hover:text-brand'
                 }`
               }
