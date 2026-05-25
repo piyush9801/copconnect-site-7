@@ -186,7 +186,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom stats band — overlapping white card on desktop, normal flow on mobile */}
-      <div className="bg-cream px-4 sm:px-6 lg:px-10 pt-8 lg:pt-0 pb-20">
+      <div className="bg-cream px-4 sm:px-6 lg:px-10 pt-16 lg:pt-0 pb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
