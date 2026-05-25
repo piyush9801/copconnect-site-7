@@ -23,7 +23,7 @@ export default function Sessions() {
           className="text-center max-w-3xl mx-auto"
         >
           <div className="text-brand text-xs font-bold uppercase tracking-[0.15em] mb-4">Book a Session</div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.05]">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.15]">
             Request a <span className="text-brand italic">Cyber Awareness</span> Session
           </h2>
           <p className="text-ink-mid text-base sm:text-lg leading-relaxed mt-5">

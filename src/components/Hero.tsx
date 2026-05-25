@@ -123,7 +123,7 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          <h1 className="font-serif font-medium text-[15vw] sm:text-[11vw] lg:text-[6.5vw] xl:text-[6vw] 2xl:text-[5.5vw] leading-[0.95] tracking-[-0.035em] text-ink">
+          <h1 className="font-serif font-medium text-[15vw] sm:text-[11vw] lg:text-[6.5vw] xl:text-[6vw] 2xl:text-[5.5vw] leading-[1.05] tracking-[-0.035em] text-ink">
             <div><WordsPullUp text="Protecting" /></div>
             <div className="text-brand"><WordsPullUp text="Families" delayBase={0.1} /></div>
             <div><WordsPullUp text="Online." delayBase={0.2} /></div>

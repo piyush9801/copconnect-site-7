@@ -75,7 +75,7 @@ export default function About() {
             <div className="text-brand text-xs font-bold uppercase tracking-[0.18em] mb-5">
               40/60 Editorial Split
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-ink leading-[1.02]">
+            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-ink leading-[1.15]">
               <WordsPullUpMultiStyle
                 align="left"
                 segments={[

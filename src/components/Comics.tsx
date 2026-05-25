@@ -13,7 +13,7 @@ export default function Comics() {
           className="text-center max-w-3xl mx-auto mb-14"
         >
           <div className="text-brand text-xs font-bold uppercase tracking-[0.15em] mb-4">Cyber Safety Comics</div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.05]">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ink leading-[1.15]">
             Stories That <span className="text-brand italic">Save Lives</span>
           </h2>
         </motion.div>

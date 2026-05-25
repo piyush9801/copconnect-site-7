@@ -83,7 +83,7 @@ export default function CCIO() {
           <div className="text-brand-mid text-xs font-bold uppercase tracking-[0.18em] mb-5">
             Cinematic Leadership
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.02]">
+          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.15]">
             <WordsPullUpMultiStyle
               segments={[
                 { text: 'Become a', className: 'text-white' },

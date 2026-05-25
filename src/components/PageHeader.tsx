@@ -27,7 +27,7 @@ export default function PageHeader({ eyebrow, segments, subtitle }: Props) {
         <div className="text-brand text-xs font-bold uppercase tracking-[0.15em] mb-4">
           {eyebrow}
         </div>
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-ink leading-[1.02] max-w-4xl">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-ink leading-[1.15] max-w-4xl">
           <WordsPullUpMultiStyle segments={segments} />
         </h1>
         {subtitle && (

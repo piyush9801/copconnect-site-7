@@ -21,20 +21,19 @@ export default function WordsPullUpMultiStyle({ segments, className = '', align 
   return (
     <div ref={ref} className={`inline-flex flex-wrap ${justify} ${className}`}>
       {allWords.map(({ word, className: wc, key }, i) => (
-        <span key={key} className="overflow-hidden inline-block mr-[0.22em] last:mr-0 pb-[0.32em]">
-          <motion.span
-            className={`inline-block ${wc}`}
-            initial={{ y: 28, opacity: 0 }}
-            animate={inView ? { y: 0, opacity: 1 } : { y: 28, opacity: 0 }}
-            transition={{
-              duration: 0.85,
-              ease: [0.16, 1, 0.3, 1],
-              delay: i * 0.06,
-            }}
-          >
-            {word}
-          </motion.span>
-        </span>
+        <motion.span
+          key={key}
+          className={`inline-block mr-[0.22em] last:mr-0 ${wc}`}
+          initial={{ y: 18, opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : { y: 18, opacity: 0 }}
+          transition={{
+            duration: 0.7,
+            ease: [0.16, 1, 0.3, 1],
+            delay: i * 0.06,
+          }}
+        >
+          {word}
+        </motion.span>
       ))}
     </div>
   )
